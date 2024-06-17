@@ -6,6 +6,18 @@ I programmed the functions that take the information from the user about the emp
 
 ## Usage
 
+Go [here](https://otekolste.github.io/employee-payroll-tracker/) to check it out.
+
+Click the "add employees" button to get started. The system will prompt you to enter a first name, last name, and salary. If you enter something that is not a number for the salary, it will automatically set it to 0.
+
+Once you've added one employee, the browser will ask you if you'd like to add another. You can continue to add employees until you wish to stop. The data of all the employees will be displayed in a table on the browser.
+
+To view the average salary and a randomly-generated employee, use "inspect element" on Chrome, and look at the console.
+
+Note that clicking "add employees"  after you have stopped adding employees will generate a new array, and replace the old one.
+
+![Screenshot of application](./Assets/deployed-app.png)
+
 ## Credits
 
 The base code was provided by edX, through UNC Chapel Hill. 

@@ -7,8 +7,8 @@ const collectEmployees = function() {
   let employeeArray = [];
 
   let addingEmployees = true;
-  while(addingEmployees) {
-    let employee ={
+  while(addingEmployees) { // While loop will iterate as long as boolean addingEmployees is true
+    let employee ={ // Create object variable for employee
       firstName: "",
       lastName: "",
       salary: 0
@@ -16,12 +16,12 @@ const collectEmployees = function() {
     employee.firstName = prompt("Enter first name:");
     employee.lastName = prompt("Enter last name:");
     employee.salary = Number(prompt("Enter salary:"));
-    if (isNaN(employee.salary)) {
+    if (isNaN(employee.salary)) { // Check to make sure employee salary is a number; otherwise we assign it to 0
       employee.salary = 0;
     }
     employeeArray.push(employee);
     if(!window.confirm("Would you like to add another employee?")){
-        addingEmployees = false;
+        addingEmployees = false; // If user is done adding employees, we set this value to false to break the loop
     }
 
   }
@@ -33,11 +33,10 @@ const collectEmployees = function() {
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let totalSalary = 0;
-  for(i=0; i<employeesArray.length;i++) {
+  for(i=0; i<employeesArray.length;i++) { // Add up all salaries
     totalSalary += employeesArray[i].salary;
   }
-  console.log(totalSalary)
-  let avgSalary = totalSalary / employeesArray.length;
+  let avgSalary = totalSalary / employeesArray.length; // Divide sum by number of employees
 
   console.log(`The average salary between our ${employeesArray.length} employee(s) is ${avgSalary}.`);
 
@@ -46,7 +45,7 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
-  let randomInt = Math.floor(Math.random() * employeesArray.length);
+  let randomInt = Math.floor(Math.random() * employeesArray.length); // Generates random int within the bounds of the array
   console.log(`Congratulations to ${employeesArray[randomInt].firstName} ${employeesArray[randomInt].lastName}, our random drawing winner!`);
 }
 
